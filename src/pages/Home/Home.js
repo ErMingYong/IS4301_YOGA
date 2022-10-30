@@ -83,6 +83,8 @@ function Home() {
 					style={{
 						border: "1px solid black",
 						borderRadius: "10%",
+						display: "flex",
+						textAlign: "center",
 					}}
 				>
 					<Card.Body>
