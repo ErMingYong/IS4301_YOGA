@@ -77,6 +77,78 @@ function Home() {
 				</Container>
 				<Container className="inner_container"></Container>
 			</Container>
+			<Container className="container">
+				<Card
+					className="card"
+					style={{
+						border: "1px solid black",
+						borderRadius: "10%",
+					}}
+				>
+					<Card.Body>
+						<Card.Title>This Month's Credit</Card.Title>
+						<Card.Text style={{ fontSize: "2rem" }}>SGD: 5.31</Card.Text>
+						<Card.Text>
+							<a href="/credit">See where your Credit is coming from</a>
+						</Card.Text>
+					</Card.Body>
+				</Card>
+				<Card className="card" style={{ width: "30%" }}>
+					<Card.Body>
+						<div>
+							<Card.Title style={{ textDecoration: "underline" }}>
+								Signed in Services:
+							</Card.Title>
+							<Card.Text>
+								<img
+									src={ShopeeIcon}
+									alt="Shopee"
+									height={50}
+									width={50}
+									style={{ margin: "0.5rem" }}
+								/>
+								<img
+									src={AmazonIcon}
+									alt="Amazon"
+									height={50}
+									width={50}
+									style={{ margin: "0.5rem" }}
+								/>
+								<img
+									src={TaobaoIcon}
+									alt="Taobao"
+									height={50}
+									width={50}
+									style={{ margin: "0.5rem" }}
+								/>
+								<img
+									src={GrabIcon}
+									alt="Grab"
+									height={50}
+									width={50}
+									style={{ margin: "0.5rem" }}
+								/>
+								<img
+									src={TwitterIcon}
+									alt="Twitter"
+									height={50}
+									width={50}
+									style={{ margin: "0.5rem" }}
+								/>
+								<Button href="/addServices">
+									<img
+										src={AdditionIcon}
+										alt="More Services"
+										height={50}
+										width={50}
+										style={{ margin: "0.5rem" }}
+									/>
+								</Button>
+							</Card.Text>
+						</div>
+					</Card.Body>
+				</Card>
+			</Container>
 		</>
 	);
 }
