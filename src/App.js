@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home.js";
 import Register from "./Register";
 import Reset from "./Reset";
 import Dashboard from "./Dashboard";
+import Credit from "./pages/Credit/Credit.js";
 
 function App() {
 	return (
@@ -16,6 +17,7 @@ function App() {
 					<Route exact path="/register" element={<Register />} />
 					<Route exact path="/reset" element={<Reset />} />
 					<Route exact path="/dashboard" element={<Dashboard />} />
+					<Route exact path="/credit" element={<Credit />} />
 				</Routes>
 			</Router>
 		</div>
