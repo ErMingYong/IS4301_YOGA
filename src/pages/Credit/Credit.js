@@ -100,51 +100,46 @@ function Credit() {
 				</Card>
 			</Container>
 			<Container className="container">
-				<Card
-					className="card"
+				<Card.Text
 					style={{
-						display: "flex",
-						borderBottom: "1px solid black",
-						width: "40%",
+						textAlign: "left",
+						borderBottom: "1px solid grey",
+						width: "80%",
 					}}
 				>
-					<Card.Text style={{ textAlign: "left", marginRight: "35rem" }}>
-						Year 2022
-					</Card.Text>
-				</Card>
+					Year 2022
+				</Card.Text>
 			</Container>
 			<Container className="container">
 				<Card
 					className="card"
 					style={{
 						display: "flex",
-						width: "45%",
+						width: "80%",
 						borderBottom: "1px solid grey",
 					}}
 				>
-					<div>
-						<Card.Text style={{ fontSize: "1.5rem" }}>
+					<div style={{ display: "flex", margin: "1rem", width: "90%" }}>
+						<Card.Text style={{ fontSize: "1.5rem", width: "15%" }}>
 							{data1.company}
 						</Card.Text>
-					</div>
-					<div
-						style={{
-							marginLeft: "1.5rem",
-							marginRight: "1.5rem",
-							width: "70%",
-						}}
-					>
-						<Card.Text style={{ fontSize: "1.5rem" }}>ID: {data1.iD}</Card.Text>
-						<Card.Text style={{ fontSize: "1.5rem" }}>
-							{data1.Description}
-						</Card.Text>
-					</div>
-					<div style={{ lineHeight: "0.8" }}>
-						<Card.Text style={{ fontSize: "1.5rem" }}>{data1.date}</Card.Text>
-						<Card.Text style={{ fontSize: "1.5rem" }}>{data1.amount}</Card.Text>
-						<Card.Text style={{ fontSize: "1.5rem", color: "blue" }}>
-							{data1.status}
-						</Card.Text>
+						<div style={{ margin: "0rem 1rem", width: "90%" }}>
+							<Card.Text style={{ fontSize: "1.5rem" }}>
+								ID: {data1.iD}
+							</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>
+								{data1.Description}
+							</Card.Text>
+						</div>
+						<div style={{ lineHeight: "0.9" }}>
+							<Card.Text style={{ fontSize: "1.5rem" }}>{data1.date}</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>
+								{data1.amount}
+							</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem", color: "blue" }}>
+								{data1.status}
+							</Card.Text>
+						</div>
 					</div>
 				</Card>
 			</Container>
@@ -153,33 +148,31 @@ function Credit() {
 					className="card"
 					style={{
 						display: "flex",
-						width: "45%",
+						width: "80%",
 						borderBottom: "1px solid grey",
 					}}
 				>
-					<div>
-						<Card.Text style={{ fontSize: "1.5rem" }}>
+					<div style={{ display: "flex", margin: "1rem", width: "90%" }}>
+						<Card.Text style={{ fontSize: "1.5rem", width: "15%" }}>
 							{data2.company}
 						</Card.Text>
-					</div>
-					<div
-						style={{
-							marginLeft: "1.5rem",
-							marginRight: "1.5rem",
-							width: "70%",
-						}}
-					>
-						<Card.Text style={{ fontSize: "1.5rem" }}>ID: {data2.iD}</Card.Text>
-						<Card.Text style={{ fontSize: "1.5rem" }}>
-							{data2.Description}
-						</Card.Text>
-					</div>
-					<div style={{ lineHeight: "0.8" }}>
-						<Card.Text style={{ fontSize: "1.5rem" }}>{data2.date}</Card.Text>
-						<Card.Text style={{ fontSize: "1.5rem" }}>{data2.amount}</Card.Text>
-						<Card.Text style={{ fontSize: "1.5rem", color: "blue" }}>
-							{data2.status}
-						</Card.Text>
+						<div style={{ margin: "0rem 1rem", width: "90%" }}>
+							<Card.Text style={{ fontSize: "1.5rem" }}>
+								ID: {data2.iD}
+							</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>
+								{data2.Description}
+							</Card.Text>
+						</div>
+						<div style={{ lineHeight: "0.9" }}>
+							<Card.Text style={{ fontSize: "1.5rem" }}>{data2.date}</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>
+								{data2.amount}
+							</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem", color: "blue" }}>
+								{data2.status}
+							</Card.Text>
+						</div>
 					</div>
 				</Card>
 			</Container>
@@ -188,33 +181,31 @@ function Credit() {
 					className="card"
 					style={{
 						display: "flex",
-						width: "45%",
+						width: "80%",
 						borderBottom: "1px solid grey",
 					}}
 				>
-					<div>
-						<Card.Text style={{ fontSize: "1.5rem" }}>
+					<div style={{ display: "flex", margin: "1rem", width: "90%" }}>
+						<Card.Text style={{ fontSize: "1.5rem", width: "15%" }}>
 							{data3.company}
 						</Card.Text>
-					</div>
-					<div
-						style={{
-							marginLeft: "1.5rem",
-							marginRight: "1.5rem",
-							width: "70%",
-						}}
-					>
-						<Card.Text style={{ fontSize: "1.5rem" }}>ID: {data3.iD}</Card.Text>
-						<Card.Text style={{ fontSize: "1.5rem" }}>
-							{data3.Description}
-						</Card.Text>
-					</div>
-					<div style={{ lineHeight: "0.8" }}>
-						<Card.Text style={{ fontSize: "1.5rem" }}>{data3.date}</Card.Text>
-						<Card.Text style={{ fontSize: "1.5rem" }}>{data3.amount}</Card.Text>
-						<Card.Text style={{ fontSize: "1.5rem", color: "green" }}>
-							{data3.status}
-						</Card.Text>
+						<div style={{ margin: "0rem 1rem", width: "90%" }}>
+							<Card.Text style={{ fontSize: "1.5rem" }}>
+								ID: {data3.iD}
+							</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>
+								{data3.Description}
+							</Card.Text>
+						</div>
+						<div style={{ lineHeight: "0.9" }}>
+							<Card.Text style={{ fontSize: "1.5rem" }}>{data3.date}</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>
+								{data3.amount}
+							</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem", color: "blue" }}>
+								{data3.status}
+							</Card.Text>
+						</div>
 					</div>
 				</Card>
 			</Container>

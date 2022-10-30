@@ -10,9 +10,14 @@ import Button from "react-bootstrap/Button";
 function Header() {
 	return (
 		<>
-			<Navbar className="navbar" bg="dark" variant="dark">
-				<Container>
-					<Nav className="me-auto">
+			<Navbar bg="dark" variant="dark">
+				<Container className="container">
+					<Nav
+						className="me-auto"
+						style={{
+							margin: "auto",
+						}}
+					>
 						<Navbar.Brand className="navbar_item">DATALOCK</Navbar.Brand>{" "}
 						<Nav.Link className="navbar_item" href="/home">
 							Home

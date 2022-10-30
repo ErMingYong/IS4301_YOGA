@@ -6,6 +6,7 @@ import Register from "./Register";
 import Reset from "./Reset";
 import Dashboard from "./Dashboard";
 import Credit from "./pages/Credit/Credit.js";
+import Withdraw from "./pages/Withdraw/Withdraw.js";
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 					<Route exact path="/reset" element={<Reset />} />
 					<Route exact path="/dashboard" element={<Dashboard />} />
 					<Route exact path="/credit" element={<Credit />} />
+					<Route exact path="/withdraw" element={<Withdraw />} />
 				</Routes>
 			</Router>
 		</div>

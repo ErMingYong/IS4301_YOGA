@@ -58,7 +58,7 @@ function Home() {
 		<>
 			<Header />
 			<Container className="container">
-				<Container lassName="inner_container">
+				<Container className="inner_container">
 					<img
 						className="brand_image"
 						src="/favicon.ico"
@@ -75,7 +75,6 @@ function Home() {
 						width={80}
 					/>
 				</Container>
-				<Container className="inner_container"></Container>
 			</Container>
 			<Container className="container">
 				<Card
@@ -137,7 +136,10 @@ function Home() {
 									width={50}
 									style={{ margin: "0.5rem" }}
 								/>
-								<Button href="/addServices">
+								<Button
+									href="/addServices"
+									style={{ backgroundColor: "white", border: "none" }}
+								>
 									<img
 										src={AdditionIcon}
 										alt="More Services"
@@ -152,8 +154,7 @@ function Home() {
 				</Card>
 			</Container>
 			<Container className="container">
-				{/* <Card className="card" style={{ width: "30%" }}> */}
-				<Card className="card">
+				<Card className="card" style={{ width: "30%" }}>
 					<Card.Body>
 						<div>
 							<Card.Title style={{ textDecoration: "underline" }}>
@@ -181,7 +182,10 @@ function Home() {
 									width={50}
 									style={{ margin: "0.5rem" }}
 								/>
-								<Button href="/addFinancialServices">
+								<Button
+									href="/addFinancialServices"
+									style={{ backgroundColor: "white", border: "none" }}
+								>
 									<img
 										src={AdditionIcon}
 										alt="More Services"
@@ -194,10 +198,7 @@ function Home() {
 						</div>
 					</Card.Body>
 				</Card>
-				<Card
-					className="card"
-					style={{ width: "30%", justifyContent: "left", paddingLeft: "6rem" }}
-				>
+				<Card className="card" style={{ width: "30%", justifyContent: "left" }}>
 					<Card.Body>
 						<div>
 							<Card.Title style={{ textDecoration: "underline" }}>
@@ -225,7 +226,10 @@ function Home() {
 									width={50}
 									style={{ margin: "0.5rem" }}
 								/>
-								<Button href="/addConnectAccounts">
+								<Button
+									href="/addConnectAccounts"
+									style={{ backgroundColor: "white", border: "none" }}
+								>
 									<img
 										src={AdditionIcon}
 										alt="More Services"
