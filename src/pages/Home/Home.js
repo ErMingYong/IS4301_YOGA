@@ -149,6 +149,94 @@ function Home() {
 					</Card.Body>
 				</Card>
 			</Container>
+			<Container className="container">
+				{/* <Card className="card" style={{ width: "30%" }}> */}
+				<Card className="card">
+					<Card.Body>
+						<div>
+							<Card.Title style={{ textDecoration: "underline" }}>
+								Financial Services:
+							</Card.Title>
+							<Card.Text>
+								<img
+									src={DBSIcon}
+									alt="DBS"
+									height={50}
+									width={50}
+									style={{ margin: "0.5rem" }}
+								/>
+								<img
+									src={VisaIcon}
+									alt="Visa"
+									height={50}
+									width={50}
+									style={{ margin: "0.5rem" }}
+								/>
+								<img
+									src={TigerBrokerIcon}
+									alt="Tiger Broker"
+									height={50}
+									width={50}
+									style={{ margin: "0.5rem" }}
+								/>
+								<Button href="/addFinancialServices">
+									<img
+										src={AdditionIcon}
+										alt="More Services"
+										height={50}
+										width={50}
+										style={{ margin: "0.5rem" }}
+									/>
+								</Button>
+							</Card.Text>
+						</div>
+					</Card.Body>
+				</Card>
+				<Card
+					className="card"
+					style={{ width: "30%", justifyContent: "left", paddingLeft: "6rem" }}
+				>
+					<Card.Body>
+						<div>
+							<Card.Title style={{ textDecoration: "underline" }}>
+								Connected Accounts:
+							</Card.Title>
+							<Card.Text>
+								<img
+									src={GoogleIcon}
+									alt="Google"
+									height={50}
+									width={50}
+									style={{ margin: "0.5rem" }}
+								/>
+								<img
+									src={AppleIcon}
+									alt="Apple"
+									height={50}
+									width={50}
+									style={{ margin: "0.5rem" }}
+								/>
+								<img
+									src={SingPassIcon}
+									alt="SingPass"
+									height={50}
+									width={50}
+									style={{ margin: "0.5rem" }}
+								/>
+								<Button href="/addConnectAccounts">
+									<img
+										src={AdditionIcon}
+										alt="More Services"
+										height={50}
+										width={50}
+										style={{ margin: "0.5rem" }}
+									/>
+								</Button>
+							</Card.Text>
+						</div>
+					</Card.Body>
+				</Card>
+			</Container>
 		</>
 	);
 }
