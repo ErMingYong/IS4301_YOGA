@@ -14,14 +14,14 @@ function Header() {
 				<Container>
 					<Nav className="me-auto">
 						<Navbar.Brand className="navbar_item">DATALOCK</Navbar.Brand>{" "}
-						<Nav.Link className="navbar_item" href="#home">
+						<Nav.Link className="navbar_item" href="/home">
 							Home
 						</Nav.Link>{" "}
-						<Nav.Link className="navbar_item" href="#features">
-							Features
+						<Nav.Link className="navbar_item" href="/settings">
+							Account Settings
 						</Nav.Link>{" "}
-						<Nav.Link className="navbar_item" href="#pricing">
-							Pricing
+						<Nav.Link className="navbar_item" href="/dataSettings">
+							Manage My Data
 						</Nav.Link>{" "}
 						<Button className="navbar_item" variant="primary" onClick={logout}>
 							Logout
