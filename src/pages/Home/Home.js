@@ -67,13 +67,16 @@ function Home() {
 						width={80}
 					/>
 					<h1 className="title">Your Dashboard</h1>
-					<img
-						className="profile_image"
-						src={UserProfileIcon}
-						alt="User Profile"
-						height={80}
-						width={80}
-					/>
+					<div>
+						<img
+							className="profile_image"
+							src={UserProfileIcon}
+							alt="User Profile"
+							height={80}
+							width={80}
+						/>
+						<p style={{ textAlign: "center" }}>Welcome {name} !</p>
+					</div>
 				</Container>
 			</Container>
 			<Container className="container">

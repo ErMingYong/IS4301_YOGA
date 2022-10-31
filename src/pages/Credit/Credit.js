@@ -202,7 +202,7 @@ function Credit() {
 							<Card.Text style={{ fontSize: "1.5rem" }}>
 								{data3.amount}
 							</Card.Text>
-							<Card.Text style={{ fontSize: "1.5rem", color: "blue" }}>
+							<Card.Text style={{ fontSize: "1.5rem", color: "green" }}>
 								{data3.status}
 							</Card.Text>
 						</div>
