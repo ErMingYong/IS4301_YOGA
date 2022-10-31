@@ -226,7 +226,7 @@ function Home() {
 									/>
 								</Button>
 								<Button
-									href="/addFinancialServices"
+									href="/addServices"
 									style={{ backgroundColor: "white", border: "none" }}
 								>
 									<img
@@ -285,7 +285,7 @@ function Home() {
 									/>
 								</Button>
 								<Button
-									href="/addConnectAccounts"
+									href="/addServices"
 									style={{ backgroundColor: "white", border: "none" }}
 								>
 									<img
