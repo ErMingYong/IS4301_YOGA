@@ -25,7 +25,7 @@ export const data = {
 	email: "test@test.com",
 };
 
-function Register() {
+function Settings() {
 	const [email, setEmail] = useState("");
 	const [address, setAddress] = useState("");
 	const [dob, setDob] = useState("");
@@ -166,4 +166,4 @@ function Register() {
 	);
 }
 
-export default Register;
+export default Settings;
