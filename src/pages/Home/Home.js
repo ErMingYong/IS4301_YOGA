@@ -11,8 +11,8 @@ import Button from "react-bootstrap/Button";
 
 import Header from "../../components/Header/Header.js";
 
+import DataLockIcon from "../../icons/datalock.png";
 import UserProfileIcon from "../../icons/user_profile_pic.png";
-import ShopeeIcon from "../../icons/shopee.png";
 import AmazonIcon from "../../icons/amazon.png";
 import TaobaoIcon from "../../icons/taobao.png";
 import GrabIcon from "../../icons/grab.png";
@@ -61,10 +61,10 @@ function Home() {
 				<Container className="inner_container">
 					<img
 						className="brand_image"
-						src="/favicon.ico"
+						src={DataLockIcon}
 						alt="Brand Logo"
-						height={80}
-						width={80}
+						height={100}
+						width={100}
 					/>
 					<h1 className="title">Your Dashboard</h1>
 					<div>

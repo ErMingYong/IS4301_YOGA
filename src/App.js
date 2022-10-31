@@ -7,6 +7,7 @@ import Reset from "./Reset";
 import Dashboard from "./Dashboard";
 import Settings from "./pages/Settings/Settings.js";
 import DataSettings from "./pages/DataSettings/DataSettings.js";
+import AddServices from "./pages/AddServices/AddServices.js";
 import Credit from "./pages/Credit/Credit.js";
 import Withdraw from "./pages/Withdraw/Withdraw.js";
 
@@ -33,6 +34,7 @@ function App() {
 					<Route exact path="/dashboard" element={<Dashboard />} />
 					<Route exact path="/settings" element={<Settings />} />
 					<Route exact path="/dataSettings" element={<DataSettings />} />
+					<Route exact path="/addServices" element={<AddServices />} />
 					<Route exact path="/credit" element={<Credit />} />
 					<Route exact path="/withdraw" element={<Withdraw />} />
 					<Route exact path="/DBS" element={<DBS />} />
