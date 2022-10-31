@@ -101,41 +101,66 @@ function Home() {
 								Signed in Services:
 							</Card.Title>
 							<Card.Text>
-								<img
-									src={ShopeeIcon}
-									alt="Shopee"
-									height={50}
-									width={50}
-									style={{ margin: "0.5rem" }}
-								/>
-								<img
-									src={AmazonIcon}
-									alt="Amazon"
-									height={50}
-									width={50}
-									style={{ margin: "0.5rem" }}
-								/>
-								<img
-									src={TaobaoIcon}
-									alt="Taobao"
-									height={50}
-									width={50}
-									style={{ margin: "0.5rem" }}
-								/>
-								<img
-									src={GrabIcon}
-									alt="Grab"
-									height={50}
-									width={50}
-									style={{ margin: "0.5rem" }}
-								/>
-								<img
-									src={TwitterIcon}
-									alt="Twitter"
-									height={50}
-									width={50}
-									style={{ margin: "0.5rem" }}
-								/>
+								<Button
+									href="/DBS"
+									style={{ backgroundColor: "white", border: "none" }}
+								>
+									<img
+										src={DBSIcon}
+										alt="DBS"
+										height={50}
+										width={50}
+										style={{ margin: "0.5rem" }}
+									/>
+								</Button>
+								<Button
+									href="/Amazon"
+									style={{ backgroundColor: "white", border: "none" }}
+								>
+									<img
+										src={AmazonIcon}
+										alt="Amazon"
+										height={50}
+										width={50}
+										style={{ margin: "0.5rem" }}
+									/>
+								</Button>
+								<Button
+									href="/Taobao"
+									style={{ backgroundColor: "white", border: "none" }}
+								>
+									<img
+										src={TaobaoIcon}
+										alt="Taobao"
+										height={50}
+										width={50}
+										style={{ margin: "0.5rem" }}
+									/>
+								</Button>
+								<Button
+									href="/Grab"
+									style={{ backgroundColor: "white", border: "none" }}
+								>
+									<img
+										src={GrabIcon}
+										alt="Grab"
+										height={50}
+										width={50}
+										style={{ margin: "0.5rem" }}
+									/>
+								</Button>
+								<Button
+									href="/Twitter"
+									style={{ backgroundColor: "white", border: "none" }}
+								>
+									<img
+										src={TwitterIcon}
+										alt="Twitter"
+										height={50}
+										width={50}
+										style={{ margin: "0.5rem" }}
+									/>
+								</Button>
 								<Button
 									href="/addServices"
 									style={{ backgroundColor: "white", border: "none" }}

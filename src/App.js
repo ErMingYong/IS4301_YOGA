@@ -2,7 +2,7 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from "./pages/Login/Login.js";
 import Home from "./pages/Home/Home.js";
-import Register from "./Register";
+import Register from "./pages/Register/Register.js";
 import Reset from "./Reset";
 import Dashboard from "./Dashboard";
 import Credit from "./pages/Credit/Credit.js";
