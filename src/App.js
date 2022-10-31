@@ -8,6 +8,9 @@ import Dashboard from "./Dashboard";
 import Credit from "./pages/Credit/Credit.js";
 import Withdraw from "./pages/Withdraw/Withdraw.js";
 
+import DBS from "./pages/companies/DBS/DBS.js";
+import Amazon from "./pages/companies/Amazon/Amazon.js";
+
 function App() {
 	return (
 		<div className="app">
@@ -20,6 +23,8 @@ function App() {
 					<Route exact path="/dashboard" element={<Dashboard />} />
 					<Route exact path="/credit" element={<Credit />} />
 					<Route exact path="/withdraw" element={<Withdraw />} />
+					<Route exact path="/DBS" element={<DBS />} />
+					<Route exact path="/Amazon" element={<Amazon />} />
 				</Routes>
 			</Router>
 		</div>
