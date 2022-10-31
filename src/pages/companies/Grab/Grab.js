@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
-import "./Amazon.css";
+import "./Grab.css";
 import { auth, db, logout } from "../../../firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
 
@@ -11,14 +11,14 @@ import ToggleButton from "react-bootstrap/ToggleButton";
 
 import Header from "../../../components/Header/Header.js";
 
-import AmazonIcon from "../../../icons/amazon.png";
+import GrabIcon from "../../../icons/grab.png";
 
 export const company = {
-	name: "Amazon",
+	name: "Grab",
 	description:
-		"Amazon.com, Inc. is an American multinational technology company focusing on e-commerce, cloud computing, online advertising, digital streaming, and artificial intelligence.",
+		"Grab Holdings Inc., commonly known as Grab, is a Singaporean multinational technology company. It is the developer of the Grab super-app, which provides users with transportation, food delivery and digital payments services via a mobile app.",
 	emailAddress: "Personal Email Address",
-	emailAddressExplaantion1: "Direct contact method for transactional services",
+	emailAddressExplantion1: "Direct contact method for transactional services",
 	location: "Location Data",
 	locationExplanation1:
 		"Improved relevance of stocks recommendations according to region",
@@ -46,20 +46,20 @@ export const company = {
 		"Improved analysis of personal credit rating",
 };
 
-function Amazon() {
+function Grab() {
 	const [user, loading, error] = useAuthState(auth);
 	const [name, setName] = useState("");
 	const navigate = useNavigate();
 
-	const [item1Check, setItem1Check] = useState(true);
-	const [item2Check, setItem2Check] = useState(true);
-	const [item3Check, setItem3Check] = useState(true);
-	const [item4Check, setItem4Check] = useState(true);
-	const [item5Check, setItem5Check] = useState(true);
-	const [item6Check, setItem6Check] = useState(true);
-	const [item7Check, setItem7Check] = useState(true);
-	const [item8Check, setItem8Check] = useState(true);
-	const [item9Check, setItem9Check] = useState(true);
+	const [item1Check, setItem1Check] = useState(false);
+	const [item2Check, setItem2Check] = useState(false);
+	const [item3Check, setItem3Check] = useState(false);
+	const [item4Check, setItem4Check] = useState(false);
+	const [item5Check, setItem5Check] = useState(false);
+	const [item6Check, setItem6Check] = useState(false);
+	const [item7Check, setItem7Check] = useState(false);
+	const [item8Check, setItem8Check] = useState(false);
+	const [item9Check, setItem9Check] = useState(false);
 
 	const fetchUserName = async () => {
 		try {
@@ -93,7 +93,7 @@ function Amazon() {
 					}}
 				>
 					<div style={{ display: "flex", margin: "1rem", width: "90%" }}>
-						<img src={AmazonIcon} alt="Amazon" height={150} width={150} />
+						<img src={GrabIcon} alt="Grab" height={150} width={150} />
 						<div style={{ margin: "0rem 5rem", width: "90%" }}>
 							<Card.Text style={{ fontSize: "1.5rem" }}>
 								{company.name}
@@ -131,7 +131,7 @@ function Amazon() {
 								{company.emailAddress}
 							</Card.Text>
 							<Card.Text>
-								{">"} {company.emailAddressExplaantion1}
+								{">"} {company.emailAddressExplantion1}
 							</Card.Text>
 						</div>
 
@@ -157,7 +157,7 @@ function Amazon() {
 							>
 								Estimated Credit (/Month)
 							</Card.Text>
-							<Card.Text style={{ fontSize: "1.5rem" }}>$0.02</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.00</Card.Text>
 						</div>
 					</div>
 				</Card>
@@ -203,7 +203,7 @@ function Amazon() {
 							>
 								Estimated Credit (/Month)
 							</Card.Text>
-							<Card.Text style={{ fontSize: "1.5rem" }}>$0.10</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.00</Card.Text>
 						</div>
 					</div>
 				</Card>
@@ -249,7 +249,7 @@ function Amazon() {
 							>
 								Estimated Credit (/Month)
 							</Card.Text>
-							<Card.Text style={{ fontSize: "1.5rem" }}>$0.60</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.00</Card.Text>
 						</div>
 					</div>
 				</Card>
@@ -295,7 +295,7 @@ function Amazon() {
 							>
 								Estimated Credit (/Month)
 							</Card.Text>
-							<Card.Text style={{ fontSize: "1.5rem" }}>$0.60</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.00</Card.Text>
 						</div>
 					</div>
 				</Card>
@@ -341,7 +341,7 @@ function Amazon() {
 							>
 								Estimated Credit (/Month)
 							</Card.Text>
-							<Card.Text style={{ fontSize: "1.5rem" }}>$0.05</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.00</Card.Text>
 						</div>
 					</div>
 				</Card>
@@ -387,7 +387,7 @@ function Amazon() {
 							>
 								Estimated Credit (/Month)
 							</Card.Text>
-							<Card.Text style={{ fontSize: "1.5rem" }}>$0.02</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.00</Card.Text>
 						</div>
 					</div>
 				</Card>
@@ -436,7 +436,7 @@ function Amazon() {
 							>
 								Estimated Credit (/Month)
 							</Card.Text>
-							<Card.Text style={{ fontSize: "1.5rem" }}>$0.90</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.00</Card.Text>
 						</div>
 					</div>
 				</Card>
@@ -482,7 +482,7 @@ function Amazon() {
 							>
 								Estimated Credit (/Month)
 							</Card.Text>
-							<Card.Text style={{ fontSize: "1.5rem" }}>$0.45</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.00</Card.Text>
 						</div>
 					</div>
 				</Card>
@@ -528,7 +528,7 @@ function Amazon() {
 							>
 								Estimated Credit (/Month)
 							</Card.Text>
-							<Card.Text style={{ fontSize: "1.5rem" }}>$0.90</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.00</Card.Text>
 						</div>
 					</div>
 				</Card>
@@ -537,4 +537,4 @@ function Amazon() {
 	);
 }
 
-export default Amazon;
+export default Grab;

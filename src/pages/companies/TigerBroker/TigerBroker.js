@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
-import "./Amazon.css";
+import "./TigerBroker.css";
 import { auth, db, logout } from "../../../firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
 
@@ -11,14 +11,14 @@ import ToggleButton from "react-bootstrap/ToggleButton";
 
 import Header from "../../../components/Header/Header.js";
 
-import AmazonIcon from "../../../icons/amazon.png";
+import TigerBrokerIcon from "../../../icons/tiger_broker.png";
 
 export const company = {
-	name: "Amazon",
+	name: "TigerBroker",
 	description:
-		"Amazon.com, Inc. is an American multinational technology company focusing on e-commerce, cloud computing, online advertising, digital streaming, and artificial intelligence.",
+		'Tiger Management Corp., also known as "The Tiger Fund", is an American hedge fund and family office founded by Julian Robertson. The fund began investing in 1980 and closed in March 2000/01. It continues to operate today in direct public equity investments and seeding new investment funds.',
 	emailAddress: "Personal Email Address",
-	emailAddressExplaantion1: "Direct contact method for transactional services",
+	emailAddressExplantion1: "Direct contact method for transactional services",
 	location: "Location Data",
 	locationExplanation1:
 		"Improved relevance of stocks recommendations according to region",
@@ -33,32 +33,31 @@ export const company = {
 	appleAccount: "Apple Account Data",
 	appleAccountExplanation1:
 		"Improved linking of personal data from Apple Account",
-	creditTransactionPayment: "Credit Transaction Payment",
-	creditTransactionPaymentExplanation1:
-		"Improved analysis of personal credit rating",
-	creditTransactionPaymentExplanation2:
-		"Additional credit card fraud detection protection",
+	stockTransactions: "Stock Transactions Data",
+	stockTransactionsExplanation1: "Improved analysis of personal credit rating",
 	loanRepaymentNotice: "Loan Repayment Notice Data",
 	loanRepaymentNoticeExplanation1:
 		"Improved analysis of personal credit rating",
+	loanRepaymentNoticeExplanation2:
+		"Improved personal credit ratings for higher buy/sell limits approval",
 	mobileWalletTransaction: "Mobile Wallet Transaction Data",
 	mobileWalletTransactionExplanation1:
 		"Improved analysis of personal credit rating",
 };
 
-function Amazon() {
+function TigerBroker() {
 	const [user, loading, error] = useAuthState(auth);
 	const [name, setName] = useState("");
 	const navigate = useNavigate();
 
 	const [item1Check, setItem1Check] = useState(true);
-	const [item2Check, setItem2Check] = useState(true);
+	const [item2Check, setItem2Check] = useState(false);
 	const [item3Check, setItem3Check] = useState(true);
 	const [item4Check, setItem4Check] = useState(true);
-	const [item5Check, setItem5Check] = useState(true);
-	const [item6Check, setItem6Check] = useState(true);
-	const [item7Check, setItem7Check] = useState(true);
-	const [item8Check, setItem8Check] = useState(true);
+	const [item5Check, setItem5Check] = useState(false);
+	const [item6Check, setItem6Check] = useState(false);
+	const [item7Check, setItem7Check] = useState(false);
+	const [item8Check, setItem8Check] = useState(false);
 	const [item9Check, setItem9Check] = useState(true);
 
 	const fetchUserName = async () => {
@@ -93,7 +92,12 @@ function Amazon() {
 					}}
 				>
 					<div style={{ display: "flex", margin: "1rem", width: "90%" }}>
-						<img src={AmazonIcon} alt="Amazon" height={150} width={150} />
+						<img
+							src={TigerBrokerIcon}
+							alt="TigerBroker"
+							height={150}
+							width={150}
+						/>
 						<div style={{ margin: "0rem 5rem", width: "90%" }}>
 							<Card.Text style={{ fontSize: "1.5rem" }}>
 								{company.name}
@@ -131,7 +135,7 @@ function Amazon() {
 								{company.emailAddress}
 							</Card.Text>
 							<Card.Text>
-								{">"} {company.emailAddressExplaantion1}
+								{">"} {company.emailAddressExplantion1}
 							</Card.Text>
 						</div>
 
@@ -203,7 +207,7 @@ function Amazon() {
 							>
 								Estimated Credit (/Month)
 							</Card.Text>
-							<Card.Text style={{ fontSize: "1.5rem" }}>$0.10</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.00</Card.Text>
 						</div>
 					</div>
 				</Card>
@@ -341,7 +345,7 @@ function Amazon() {
 							>
 								Estimated Credit (/Month)
 							</Card.Text>
-							<Card.Text style={{ fontSize: "1.5rem" }}>$0.05</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.00</Card.Text>
 						</div>
 					</div>
 				</Card>
@@ -387,7 +391,7 @@ function Amazon() {
 							>
 								Estimated Credit (/Month)
 							</Card.Text>
-							<Card.Text style={{ fontSize: "1.5rem" }}>$0.02</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.00</Card.Text>
 						</div>
 					</div>
 				</Card>
@@ -404,13 +408,10 @@ function Amazon() {
 					<div style={{ display: "flex", width: "90%" }}>
 						<div style={{ width: "70%" }}>
 							<Card.Text style={{ fontSize: "1.5rem" }}>
-								{company.creditTransactionPayment}
+								{company.stockTransactions}
 							</Card.Text>
 							<Card.Text>
-								{">"} {company.creditTransactionPaymentExplanation1}
-							</Card.Text>
-							<Card.Text>
-								{">"} {company.creditTransactionPaymentExplanation2}
+								{">"} {company.stockTransactionsExplanation1}
 							</Card.Text>
 						</div>
 
@@ -436,7 +437,7 @@ function Amazon() {
 							>
 								Estimated Credit (/Month)
 							</Card.Text>
-							<Card.Text style={{ fontSize: "1.5rem" }}>$0.90</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.00</Card.Text>
 						</div>
 					</div>
 				</Card>
@@ -457,6 +458,9 @@ function Amazon() {
 							</Card.Text>
 							<Card.Text>
 								{">"} {company.loanRepaymentNoticeExplanation1}
+							</Card.Text>
+							<Card.Text>
+								{">"} {company.loanRepaymentNoticeExplanation2}
 							</Card.Text>
 						</div>
 
@@ -482,7 +486,7 @@ function Amazon() {
 							>
 								Estimated Credit (/Month)
 							</Card.Text>
-							<Card.Text style={{ fontSize: "1.5rem" }}>$0.45</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.00</Card.Text>
 						</div>
 					</div>
 				</Card>
@@ -537,4 +541,4 @@ function Amazon() {
 	);
 }
 
-export default Amazon;
+export default TigerBroker;

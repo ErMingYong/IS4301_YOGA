@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
-import "./Amazon.css";
+import "./SingPass.css";
 import { auth, db, logout } from "../../../firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
 
@@ -11,42 +11,44 @@ import ToggleButton from "react-bootstrap/ToggleButton";
 
 import Header from "../../../components/Header/Header.js";
 
-import AmazonIcon from "../../../icons/amazon.png";
+import SingPassIcon from "../../../icons/singpass.png";
 
 export const company = {
-	name: "Amazon",
+	name: "SingPass",
 	description:
-		"Amazon.com, Inc. is an American multinational technology company focusing on e-commerce, cloud computing, online advertising, digital streaming, and artificial intelligence.",
+		"SingPass is brough to you from the Singapore Smart Nation initiative. The Smart Nation is an initiative by the Government of Singapore to harness infocomm technologies, networks and big data to create tech-enabled solutions.",
 	emailAddress: "Personal Email Address",
-	emailAddressExplaantion1: "Direct contact method for transactional services",
+	emailAddressExplantion1: "Direct contact method for transactional services",
 	location: "Location Data",
 	locationExplanation1:
-		"Improved relevance of stocks recommendations according to region",
+		"Improved relevance of service recommendations according to region",
 	gender: "Gender Data",
-	genderExplanation1:
-		"Improved relevance of recommendations according to gender",
+	genderExplanation1: "Foundational data for SingPass services",
 	age: "Age Data",
-	ageExplanation1: "Improved relevance of recommendations according to age",
-	googleAccount: "Google Account Data",
-	googleAccountExplanation1:
-		"Improved linking of personal data from Google Account",
+	ageExplanation1: "Foundational data for SingPass services",
+	address: "Address Data",
+	addressExplanation1: "Foundational data for SingPass services",
+	familyDetails: "Family Details Data",
+	familyDetailsExplanation1:
+		"Identity data on family members and next-of-kin for contact tracing purposes",
+	familyDetailsExplanation2: "Mapping of all citizens of Singapore",
 	appleAccount: "Apple Account Data",
 	appleAccountExplanation1:
 		"Improved linking of personal data from Apple Account",
-	creditTransactionPayment: "Credit Transaction Payment",
-	creditTransactionPaymentExplanation1:
-		"Improved analysis of personal credit rating",
-	creditTransactionPaymentExplanation2:
-		"Additional credit card fraud detection protection",
-	loanRepaymentNotice: "Loan Repayment Notice Data",
-	loanRepaymentNoticeExplanation1:
-		"Improved analysis of personal credit rating",
-	mobileWalletTransaction: "Mobile Wallet Transaction Data",
-	mobileWalletTransactionExplanation1:
-		"Improved analysis of personal credit rating",
+	googleAccount: "Apple Account Data",
+	googleAccountExplanation1:
+		"Improved linking of personal data from Apple Account",
+	personalIncomeStatement: "Personal Income Statement",
+	personalIncomeStatementExplanation1:
+		"Improve and Simplify tax payable and detuctable process",
+	personalIncomeStatementExplanation2:
+		"Required for categorisation and qualification of government grants and subsidies",
+	charitableDonationsStatement: "Charitable Donations Statement",
+	charitableDonationsStatementExplanation1:
+		"Required for qualification of government tax deductibles",
 };
 
-function Amazon() {
+function SingPass() {
 	const [user, loading, error] = useAuthState(auth);
 	const [name, setName] = useState("");
 	const navigate = useNavigate();
@@ -60,6 +62,7 @@ function Amazon() {
 	const [item7Check, setItem7Check] = useState(true);
 	const [item8Check, setItem8Check] = useState(true);
 	const [item9Check, setItem9Check] = useState(true);
+	const [item10Check, setItem10Check] = useState(true);
 
 	const fetchUserName = async () => {
 		try {
@@ -93,7 +96,7 @@ function Amazon() {
 					}}
 				>
 					<div style={{ display: "flex", margin: "1rem", width: "90%" }}>
-						<img src={AmazonIcon} alt="Amazon" height={150} width={150} />
+						<img src={SingPassIcon} alt="SingPass" height={150} width={150} />
 						<div style={{ margin: "0rem 5rem", width: "90%" }}>
 							<Card.Text style={{ fontSize: "1.5rem" }}>
 								{company.name}
@@ -131,7 +134,7 @@ function Amazon() {
 								{company.emailAddress}
 							</Card.Text>
 							<Card.Text>
-								{">"} {company.emailAddressExplaantion1}
+								{">"} {company.emailAddressExplantion1}
 							</Card.Text>
 						</div>
 
@@ -157,7 +160,7 @@ function Amazon() {
 							>
 								Estimated Credit (/Month)
 							</Card.Text>
-							<Card.Text style={{ fontSize: "1.5rem" }}>$0.02</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.00</Card.Text>
 						</div>
 					</div>
 				</Card>
@@ -180,7 +183,6 @@ function Amazon() {
 								{">"} {company.locationExplanation1}
 							</Card.Text>
 						</div>
-
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
@@ -203,7 +205,7 @@ function Amazon() {
 							>
 								Estimated Credit (/Month)
 							</Card.Text>
-							<Card.Text style={{ fontSize: "1.5rem" }}>$0.10</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.00</Card.Text>
 						</div>
 					</div>
 				</Card>
@@ -220,13 +222,12 @@ function Amazon() {
 					<div style={{ display: "flex", width: "90%" }}>
 						<div style={{ width: "70%" }}>
 							<Card.Text style={{ fontSize: "1.5rem" }}>
-								{company.googleAccount}
+								{company.gender}
 							</Card.Text>
 							<Card.Text>
-								{">"} {company.googleAccountExplanation1}
+								{">"} {company.genderExplanation1}
 							</Card.Text>
 						</div>
-
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
@@ -249,7 +250,146 @@ function Amazon() {
 							>
 								Estimated Credit (/Month)
 							</Card.Text>
-							<Card.Text style={{ fontSize: "1.5rem" }}>$0.60</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.00</Card.Text>
+						</div>
+					</div>
+				</Card>
+			</Container>
+			<Container className="container">
+				<Card
+					className="card"
+					style={{
+						display: "flex",
+						width: "80%",
+						borderBottom: "1px solid grey",
+					}}
+				>
+					<div style={{ display: "flex", width: "90%" }}>
+						<div style={{ width: "70%" }}>
+							<Card.Text style={{ fontSize: "1.5rem" }}>
+								{company.age}
+							</Card.Text>
+							<Card.Text>
+								{">"} {company.ageExplanation1}
+							</Card.Text>
+						</div>
+						<div style={{ margin: "auto 8rem", width: "40%" }}>
+							<ToggleButton
+								className="mb-2"
+								id="toggle-check"
+								type="checkbox"
+								variant="outline-success"
+								checked={item4Check}
+								value="1"
+								onChange={(e) => setItem4Check(e.currentTarget.checked)}
+							>
+								Checked
+							</ToggleButton>
+						</div>
+						<div style={{ lineHeight: "0.9", textAlign: "center" }}>
+							<Card.Text
+								style={{
+									fontSize: "1.3rem",
+									margin: "1rem auto",
+								}}
+							>
+								Estimated Credit (/Month)
+							</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.00</Card.Text>
+						</div>
+					</div>
+				</Card>
+			</Container>
+			<Container className="container">
+				<Card
+					className="card"
+					style={{
+						display: "flex",
+						width: "80%",
+						borderBottom: "1px solid grey",
+					}}
+				>
+					<div style={{ display: "flex", width: "90%" }}>
+						<div style={{ width: "70%" }}>
+							<Card.Text style={{ fontSize: "1.5rem" }}>
+								{company.address}
+							</Card.Text>
+							<Card.Text>
+								{">"} {company.addressExplanation1}
+							</Card.Text>
+						</div>
+
+						<div style={{ margin: "auto 8rem", width: "40%" }}>
+							<ToggleButton
+								className="mb-2"
+								id="toggle-check"
+								type="checkbox"
+								variant="outline-success"
+								checked={item5Check}
+								value="1"
+								onChange={(e) => setItem5Check(e.currentTarget.checked)}
+							>
+								Checked
+							</ToggleButton>
+						</div>
+						<div style={{ lineHeight: "0.9", textAlign: "center" }}>
+							<Card.Text
+								style={{
+									fontSize: "1.3rem",
+									margin: "1rem auto",
+								}}
+							>
+								Estimated Credit (/Month)
+							</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.00</Card.Text>
+						</div>
+					</div>
+				</Card>
+			</Container>
+			<Container className="container">
+				<Card
+					className="card"
+					style={{
+						display: "flex",
+						width: "80%",
+						borderBottom: "1px solid grey",
+					}}
+				>
+					<div style={{ display: "flex", width: "90%" }}>
+						<div style={{ width: "70%" }}>
+							<Card.Text style={{ fontSize: "1.5rem" }}>
+								{company.familyDetails}
+							</Card.Text>
+							<Card.Text>
+								{">"} {company.familyDetailsExplanation1}
+							</Card.Text>
+							<Card.Text>
+								{">"} {company.familyDetailsExplanation2}
+							</Card.Text>
+						</div>
+						<div style={{ margin: "auto 8rem", width: "40%" }}>
+							<ToggleButton
+								className="mb-2"
+								id="toggle-check"
+								type="checkbox"
+								variant="outline-success"
+								checked={item6Check}
+								value="1"
+								onChange={(e) => setItem6Check(e.currentTarget.checked)}
+							>
+								Checked
+							</ToggleButton>
+						</div>
+						<div style={{ lineHeight: "0.9", textAlign: "center" }}>
+							<Card.Text
+								style={{
+									fontSize: "1.3rem",
+									margin: "1rem auto",
+								}}
+							>
+								Estimated Credit (/Month)
+							</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.00</Card.Text>
 						</div>
 					</div>
 				</Card>
@@ -279,9 +419,9 @@ function Amazon() {
 								id="toggle-check"
 								type="checkbox"
 								variant="outline-success"
-								checked={item4Check}
+								checked={item7Check}
 								value="1"
-								onChange={(e) => setItem4Check(e.currentTarget.checked)}
+								onChange={(e) => setItem7Check(e.currentTarget.checked)}
 							>
 								Checked
 							</ToggleButton>
@@ -295,7 +435,53 @@ function Amazon() {
 							>
 								Estimated Credit (/Month)
 							</Card.Text>
-							<Card.Text style={{ fontSize: "1.5rem" }}>$0.60</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.00</Card.Text>
+						</div>
+					</div>
+				</Card>
+			</Container>
+			<Container className="container">
+				<Card
+					className="card"
+					style={{
+						display: "flex",
+						width: "80%",
+						borderBottom: "1px solid grey",
+					}}
+				>
+					<div style={{ display: "flex", width: "90%" }}>
+						<div style={{ width: "70%" }}>
+							<Card.Text style={{ fontSize: "1.5rem" }}>
+								{company.googleAccount}
+							</Card.Text>
+							<Card.Text>
+								{">"} {company.googleAccountExplanation1}
+							</Card.Text>
+						</div>
+
+						<div style={{ margin: "auto 8rem", width: "40%" }}>
+							<ToggleButton
+								className="mb-2"
+								id="toggle-check"
+								type="checkbox"
+								variant="outline-success"
+								checked={item8Check}
+								value="1"
+								onChange={(e) => setItem8Check(e.currentTarget.checked)}
+							>
+								Checked
+							</ToggleButton>
+						</div>
+						<div style={{ lineHeight: "0.9", textAlign: "center" }}>
+							<Card.Text
+								style={{
+									fontSize: "1.3rem",
+									margin: "1rem auto",
+								}}
+							>
+								Estimated Credit (/Month)
+							</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.00</Card.Text>
 						</div>
 					</div>
 				</Card>
@@ -325,9 +511,9 @@ function Amazon() {
 								id="toggle-check"
 								type="checkbox"
 								variant="outline-success"
-								checked={item5Check}
+								checked={item9Check}
 								value="1"
-								onChange={(e) => setItem5Check(e.currentTarget.checked)}
+								onChange={(e) => setItem9Check(e.currentTarget.checked)}
 							>
 								Checked
 							</ToggleButton>
@@ -341,7 +527,7 @@ function Amazon() {
 							>
 								Estimated Credit (/Month)
 							</Card.Text>
-							<Card.Text style={{ fontSize: "1.5rem" }}>$0.05</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.00</Card.Text>
 						</div>
 					</div>
 				</Card>
@@ -371,9 +557,9 @@ function Amazon() {
 								id="toggle-check"
 								type="checkbox"
 								variant="outline-success"
-								checked={item6Check}
+								checked={item10Check}
 								value="1"
-								onChange={(e) => setItem6Check(e.currentTarget.checked)}
+								onChange={(e) => setItem10Check(e.currentTarget.checked)}
 							>
 								Checked
 							</ToggleButton>
@@ -387,7 +573,7 @@ function Amazon() {
 							>
 								Estimated Credit (/Month)
 							</Card.Text>
-							<Card.Text style={{ fontSize: "1.5rem" }}>$0.02</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.00</Card.Text>
 						</div>
 					</div>
 				</Card>
@@ -404,13 +590,13 @@ function Amazon() {
 					<div style={{ display: "flex", width: "90%" }}>
 						<div style={{ width: "70%" }}>
 							<Card.Text style={{ fontSize: "1.5rem" }}>
-								{company.creditTransactionPayment}
+								{company.familyDetails}
 							</Card.Text>
 							<Card.Text>
-								{">"} {company.creditTransactionPaymentExplanation1}
+								{">"} {company.familyDetailsExplanation1}
 							</Card.Text>
 							<Card.Text>
-								{">"} {company.creditTransactionPaymentExplanation2}
+								{">"} {company.familyDetailsExplanation2}
 							</Card.Text>
 						</div>
 
@@ -436,7 +622,7 @@ function Amazon() {
 							>
 								Estimated Credit (/Month)
 							</Card.Text>
-							<Card.Text style={{ fontSize: "1.5rem" }}>$0.90</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.00</Card.Text>
 						</div>
 					</div>
 				</Card>
@@ -453,10 +639,13 @@ function Amazon() {
 					<div style={{ display: "flex", width: "90%" }}>
 						<div style={{ width: "70%" }}>
 							<Card.Text style={{ fontSize: "1.5rem" }}>
-								{company.loanRepaymentNotice}
+								{company.personalIncomeStatement}
 							</Card.Text>
 							<Card.Text>
-								{">"} {company.loanRepaymentNoticeExplanation1}
+								{">"} {company.personalIncomeStatementExplanation1}
+							</Card.Text>
+							<Card.Text>
+								{">"} {company.personalIncomeStatementExplanation2}
 							</Card.Text>
 						</div>
 
@@ -482,7 +671,7 @@ function Amazon() {
 							>
 								Estimated Credit (/Month)
 							</Card.Text>
-							<Card.Text style={{ fontSize: "1.5rem" }}>$0.45</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.00</Card.Text>
 						</div>
 					</div>
 				</Card>
@@ -499,10 +688,10 @@ function Amazon() {
 					<div style={{ display: "flex", width: "90%" }}>
 						<div style={{ width: "70%" }}>
 							<Card.Text style={{ fontSize: "1.5rem" }}>
-								{company.mobileWalletTransaction}
+								{company.charitableDonationsStatement}
 							</Card.Text>
 							<Card.Text>
-								{">"} {company.mobileWalletTransactionExplanation1}
+								{">"} {company.charitableDonationsStatementExplanation1}
 							</Card.Text>
 						</div>
 
@@ -528,7 +717,7 @@ function Amazon() {
 							>
 								Estimated Credit (/Month)
 							</Card.Text>
-							<Card.Text style={{ fontSize: "1.5rem" }}>$0.90</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.00</Card.Text>
 						</div>
 					</div>
 				</Card>
@@ -537,4 +726,4 @@ function Amazon() {
 	);
 }
 
-export default Amazon;
+export default SingPass;

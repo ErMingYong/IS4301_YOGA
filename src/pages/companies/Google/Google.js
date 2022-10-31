@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
-import "./Amazon.css";
+import "./Google.css";
 import { auth, db, logout } from "../../../firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
 
@@ -11,42 +11,46 @@ import ToggleButton from "react-bootstrap/ToggleButton";
 
 import Header from "../../../components/Header/Header.js";
 
-import AmazonIcon from "../../../icons/amazon.png";
+import GoogleIcon from "../../../icons/google.png";
 
 export const company = {
-	name: "Amazon",
+	name: "Google",
 	description:
-		"Amazon.com, Inc. is an American multinational technology company focusing on e-commerce, cloud computing, online advertising, digital streaming, and artificial intelligence.",
+		"Google LLC is an American multinational technology company focusing on search engine technology, online advertising, cloud computing, computer software, quantum computing, e-commerce, artificial intelligence, and consumer electronics.",
 	emailAddress: "Personal Email Address",
-	emailAddressExplaantion1: "Direct contact method for transactional services",
+	emailAddressExplantion1: "Direct contact method for transactional services",
 	location: "Location Data",
 	locationExplanation1:
-		"Improved relevance of stocks recommendations according to region",
+		"Improved relevance of recommendations according to region",
 	gender: "Gender Data",
 	genderExplanation1:
 		"Improved relevance of recommendations according to gender",
 	age: "Age Data",
 	ageExplanation1: "Improved relevance of recommendations according to age",
-	googleAccount: "Google Account Data",
-	googleAccountExplanation1:
-		"Improved linking of personal data from Google Account",
+	searchHistory: "Google Search History Data",
+	searchHistoryExplanation1:
+		"Improved relevance of search results provided based on search history",
+	searchHistoryExplanation2:
+		"Improved recommendations based on personal search history",
+	browserHistory: "Browser History Data",
+	browserHistoryExplanation1:
+		"Improved relevance of search results provided based on browsing history",
+	browserHistoryExplanation2:
+		"Improved recommendations based on personal browsing history",
 	appleAccount: "Apple Account Data",
 	appleAccountExplanation1:
 		"Improved linking of personal data from Apple Account",
-	creditTransactionPayment: "Credit Transaction Payment",
-	creditTransactionPaymentExplanation1:
+	creditCardRepaymentNotice: "Credit Card Repayment Notice Data",
+	creditCardRepaymentNoticeExplanation1:
 		"Improved analysis of personal credit rating",
-	creditTransactionPaymentExplanation2:
-		"Additional credit card fraud detection protection",
-	loanRepaymentNotice: "Loan Repayment Notice Data",
-	loanRepaymentNoticeExplanation1:
-		"Improved analysis of personal credit rating",
+	creditCardRepaymentNoticeExplanation2:
+		"Improved recommendations based on Google's proprietary credit rating system",
 	mobileWalletTransaction: "Mobile Wallet Transaction Data",
 	mobileWalletTransactionExplanation1:
 		"Improved analysis of personal credit rating",
 };
 
-function Amazon() {
+function Google() {
 	const [user, loading, error] = useAuthState(auth);
 	const [name, setName] = useState("");
 	const navigate = useNavigate();
@@ -54,7 +58,7 @@ function Amazon() {
 	const [item1Check, setItem1Check] = useState(true);
 	const [item2Check, setItem2Check] = useState(true);
 	const [item3Check, setItem3Check] = useState(true);
-	const [item4Check, setItem4Check] = useState(true);
+	const [item4Check, setItem4Check] = useState(false);
 	const [item5Check, setItem5Check] = useState(true);
 	const [item6Check, setItem6Check] = useState(true);
 	const [item7Check, setItem7Check] = useState(true);
@@ -93,7 +97,7 @@ function Amazon() {
 					}}
 				>
 					<div style={{ display: "flex", margin: "1rem", width: "90%" }}>
-						<img src={AmazonIcon} alt="Amazon" height={150} width={150} />
+						<img src={GoogleIcon} alt="Google" height={150} width={150} />
 						<div style={{ margin: "0rem 5rem", width: "90%" }}>
 							<Card.Text style={{ fontSize: "1.5rem" }}>
 								{company.name}
@@ -131,7 +135,7 @@ function Amazon() {
 								{company.emailAddress}
 							</Card.Text>
 							<Card.Text>
-								{">"} {company.emailAddressExplaantion1}
+								{">"} {company.emailAddressExplantion1}
 							</Card.Text>
 						</div>
 
@@ -203,7 +207,7 @@ function Amazon() {
 							>
 								Estimated Credit (/Month)
 							</Card.Text>
-							<Card.Text style={{ fontSize: "1.5rem" }}>$0.10</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.20</Card.Text>
 						</div>
 					</div>
 				</Card>
@@ -220,10 +224,13 @@ function Amazon() {
 					<div style={{ display: "flex", width: "90%" }}>
 						<div style={{ width: "70%" }}>
 							<Card.Text style={{ fontSize: "1.5rem" }}>
-								{company.googleAccount}
+								{company.searchHistory}
 							</Card.Text>
 							<Card.Text>
-								{">"} {company.googleAccountExplanation1}
+								{">"} {company.searchHistoryExplanation1}
+							</Card.Text>
+							<Card.Text>
+								{">"} {company.searchHistoryExplanation2}
 							</Card.Text>
 						</div>
 
@@ -295,7 +302,7 @@ function Amazon() {
 							>
 								Estimated Credit (/Month)
 							</Card.Text>
-							<Card.Text style={{ fontSize: "1.5rem" }}>$0.60</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.00</Card.Text>
 						</div>
 					</div>
 				</Card>
@@ -341,7 +348,7 @@ function Amazon() {
 							>
 								Estimated Credit (/Month)
 							</Card.Text>
-							<Card.Text style={{ fontSize: "1.5rem" }}>$0.05</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.10</Card.Text>
 						</div>
 					</div>
 				</Card>
@@ -404,13 +411,13 @@ function Amazon() {
 					<div style={{ display: "flex", width: "90%" }}>
 						<div style={{ width: "70%" }}>
 							<Card.Text style={{ fontSize: "1.5rem" }}>
-								{company.creditTransactionPayment}
+								{company.browserHistory}
 							</Card.Text>
 							<Card.Text>
-								{">"} {company.creditTransactionPaymentExplanation1}
+								{">"} {company.browserHistoryExplanation1}
 							</Card.Text>
 							<Card.Text>
-								{">"} {company.creditTransactionPaymentExplanation2}
+								{">"} {company.browserHistoryExplanation2}
 							</Card.Text>
 						</div>
 
@@ -453,10 +460,13 @@ function Amazon() {
 					<div style={{ display: "flex", width: "90%" }}>
 						<div style={{ width: "70%" }}>
 							<Card.Text style={{ fontSize: "1.5rem" }}>
-								{company.loanRepaymentNotice}
+								{company.creditCardRepaymentNotice}
 							</Card.Text>
 							<Card.Text>
-								{">"} {company.loanRepaymentNoticeExplanation1}
+								{">"} {company.creditCardRepaymentNoticeExplanation1}
+							</Card.Text>
+							<Card.Text>
+								{">"} {company.creditCardRepaymentNoticeExplanation2}
 							</Card.Text>
 						</div>
 
@@ -482,7 +492,7 @@ function Amazon() {
 							>
 								Estimated Credit (/Month)
 							</Card.Text>
-							<Card.Text style={{ fontSize: "1.5rem" }}>$0.45</Card.Text>
+							<Card.Text style={{ fontSize: "1.5rem" }}>$0.80</Card.Text>
 						</div>
 					</div>
 				</Card>
@@ -537,4 +547,4 @@ function Amazon() {
 	);
 }
 
-export default Amazon;
+export default Google;

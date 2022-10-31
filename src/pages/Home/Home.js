@@ -186,27 +186,42 @@ function Home() {
 								Financial Services:
 							</Card.Title>
 							<Card.Text>
-								<img
-									src={DBSIcon}
-									alt="DBS"
-									height={50}
-									width={50}
-									style={{ margin: "0.5rem" }}
-								/>
-								<img
-									src={VisaIcon}
-									alt="Visa"
-									height={50}
-									width={50}
-									style={{ margin: "0.5rem" }}
-								/>
-								<img
-									src={TigerBrokerIcon}
-									alt="Tiger Broker"
-									height={50}
-									width={50}
-									style={{ margin: "0.5rem" }}
-								/>
+								<Button
+									href="/DBS"
+									style={{ backgroundColor: "white", border: "none" }}
+								>
+									<img
+										src={DBSIcon}
+										alt="DBS"
+										height={50}
+										width={50}
+										style={{ margin: "0.5rem" }}
+									/>
+								</Button>
+								<Button
+									href="/Visa"
+									style={{ backgroundColor: "white", border: "none" }}
+								>
+									<img
+										src={VisaIcon}
+										alt="Visa"
+										height={50}
+										width={50}
+										style={{ margin: "0.5rem" }}
+									/>
+								</Button>
+								<Button
+									href="/TigerBroker"
+									style={{ backgroundColor: "white", border: "none" }}
+								>
+									<img
+										src={TigerBrokerIcon}
+										alt="Tiger Broker"
+										height={50}
+										width={50}
+										style={{ margin: "0.5rem" }}
+									/>
+								</Button>
 								<Button
 									href="/addFinancialServices"
 									style={{ backgroundColor: "white", border: "none" }}
@@ -230,27 +245,42 @@ function Home() {
 								Connected Accounts:
 							</Card.Title>
 							<Card.Text>
-								<img
-									src={GoogleIcon}
-									alt="Google"
-									height={50}
-									width={50}
-									style={{ margin: "0.5rem" }}
-								/>
-								<img
-									src={AppleIcon}
-									alt="Apple"
-									height={50}
-									width={50}
-									style={{ margin: "0.5rem" }}
-								/>
-								<img
-									src={SingPassIcon}
-									alt="SingPass"
-									height={50}
-									width={50}
-									style={{ margin: "0.5rem" }}
-								/>
+								<Button
+									href="/Google"
+									style={{ backgroundColor: "white", border: "none" }}
+								>
+									<img
+										src={GoogleIcon}
+										alt="Google"
+										height={50}
+										width={50}
+										style={{ margin: "0.5rem" }}
+									/>
+								</Button>
+								<Button
+									href="/Apple"
+									style={{ backgroundColor: "white", border: "none" }}
+								>
+									<img
+										src={AppleIcon}
+										alt="Apple"
+										height={50}
+										width={50}
+										style={{ margin: "0.5rem" }}
+									/>
+								</Button>
+								<Button
+									href="/SingPass"
+									style={{ backgroundColor: "white", border: "none" }}
+								>
+									<img
+										src={SingPassIcon}
+										alt="SingPass"
+										height={50}
+										width={50}
+										style={{ margin: "0.5rem" }}
+									/>
+								</Button>
 								<Button
 									href="/addConnectAccounts"
 									style={{ backgroundColor: "white", border: "none" }}

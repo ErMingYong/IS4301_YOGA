@@ -18,7 +18,7 @@ export const company = {
 	description:
 		"DBS Bank Limited, often known as DBS, is a Singaporean multinational banking and financial services corporation headquartered at the Marina Bay Financial Centre in the Marina Bay district of Singapore.",
 	emailAddress: "Personal Email Address",
-	emailAddressExplaantion1: "Direct contact method for transactional services",
+	emailAddressExplantion1: "Direct contact method for transactional services",
 	location: "Location Data",
 	locationExplanation1:
 		"Improved relevance of stocks recommendations according to region",
@@ -131,7 +131,7 @@ function DBS() {
 								{company.emailAddress}
 							</Card.Text>
 							<Card.Text>
-								{">"} {company.emailAddressExplaantion1}
+								{">"} {company.emailAddressExplantion1}
 							</Card.Text>
 						</div>
 
@@ -279,7 +279,7 @@ function DBS() {
 								id="toggle-check"
 								type="checkbox"
 								variant="outline-success"
-								checked={item1Check}
+								checked={item4Check}
 								value="1"
 								onChange={(e) => setItem4Check(e.currentTarget.checked)}
 							>
