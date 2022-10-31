@@ -63,6 +63,9 @@ function SingPass() {
 	const [item8Check, setItem8Check] = useState(true);
 	const [item9Check, setItem9Check] = useState(true);
 	const [item10Check, setItem10Check] = useState(true);
+	const [item11Check, setItem11Check] = useState(true);
+	const [item12Check, setItem12Check] = useState(true);
+	const [item13Check, setItem13Check] = useState(true);
 
 	const fetchUserName = async () => {
 		try {
@@ -141,7 +144,7 @@ function SingPass() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-1"
 								type="checkbox"
 								variant="outline-success"
 								checked={item1Check}
@@ -186,7 +189,7 @@ function SingPass() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-2"
 								type="checkbox"
 								variant="outline-success"
 								checked={item2Check}
@@ -231,7 +234,7 @@ function SingPass() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-3"
 								type="checkbox"
 								variant="outline-success"
 								checked={item3Check}
@@ -276,7 +279,7 @@ function SingPass() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-4"
 								type="checkbox"
 								variant="outline-success"
 								checked={item4Check}
@@ -322,7 +325,7 @@ function SingPass() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-5"
 								type="checkbox"
 								variant="outline-success"
 								checked={item5Check}
@@ -370,7 +373,7 @@ function SingPass() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-6"
 								type="checkbox"
 								variant="outline-success"
 								checked={item6Check}
@@ -416,7 +419,7 @@ function SingPass() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-7"
 								type="checkbox"
 								variant="outline-success"
 								checked={item7Check}
@@ -462,7 +465,7 @@ function SingPass() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-8"
 								type="checkbox"
 								variant="outline-success"
 								checked={item8Check}
@@ -508,7 +511,7 @@ function SingPass() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-9"
 								type="checkbox"
 								variant="outline-success"
 								checked={item9Check}
@@ -554,7 +557,7 @@ function SingPass() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-10"
 								type="checkbox"
 								variant="outline-success"
 								checked={item10Check}
@@ -603,12 +606,12 @@ function SingPass() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-11"
 								type="checkbox"
 								variant="outline-success"
-								checked={item7Check}
+								checked={item11Check}
 								value="1"
-								onChange={(e) => setItem7Check(e.currentTarget.checked)}
+								onChange={(e) => setItem11Check(e.currentTarget.checked)}
 							>
 								Checked
 							</ToggleButton>
@@ -652,12 +655,12 @@ function SingPass() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-12"
 								type="checkbox"
 								variant="outline-success"
-								checked={item8Check}
+								checked={item12Check}
 								value="1"
-								onChange={(e) => setItem8Check(e.currentTarget.checked)}
+								onChange={(e) => setItem12Check(e.currentTarget.checked)}
 							>
 								Checked
 							</ToggleButton>
@@ -698,12 +701,12 @@ function SingPass() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-13"
 								type="checkbox"
 								variant="outline-success"
-								checked={item9Check}
+								checked={item13Check}
 								value="1"
-								onChange={(e) => setItem9Check(e.currentTarget.checked)}
+								onChange={(e) => setItem13Check(e.currentTarget.checked)}
 							>
 								Checked
 							</ToggleButton>

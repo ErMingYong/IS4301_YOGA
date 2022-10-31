@@ -121,7 +121,7 @@ function Twitter() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-1"
 								type="checkbox"
 								variant="outline-success"
 								checked={item1Check}
@@ -167,7 +167,7 @@ function Twitter() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-2"
 								type="checkbox"
 								variant="outline-success"
 								checked={item2Check}
@@ -213,7 +213,7 @@ function Twitter() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-3"
 								type="checkbox"
 								variant="outline-success"
 								checked={item3Check}
@@ -259,7 +259,7 @@ function Twitter() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-4"
 								type="checkbox"
 								variant="outline-success"
 								checked={item4Check}
@@ -305,7 +305,7 @@ function Twitter() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-5"
 								type="checkbox"
 								variant="outline-success"
 								checked={item5Check}

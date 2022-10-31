@@ -138,7 +138,7 @@ function DBS() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-1"
 								type="checkbox"
 								variant="outline-success"
 								checked={item1Check}
@@ -184,11 +184,11 @@ function DBS() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-2"
 								type="checkbox"
 								variant="outline-success"
 								checked={item2Check}
-								value="1"
+								value="2"
 								onChange={(e) => setItem2Check(e.currentTarget.checked)}
 							>
 								Checked
@@ -230,11 +230,11 @@ function DBS() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-3"
 								type="checkbox"
 								variant="outline-success"
 								checked={item3Check}
-								value="1"
+								value="3"
 								onChange={(e) => setItem3Check(e.currentTarget.checked)}
 							>
 								Checked
@@ -276,11 +276,11 @@ function DBS() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-4"
 								type="checkbox"
 								variant="outline-success"
 								checked={item4Check}
-								value="1"
+								value="4"
 								onChange={(e) => setItem4Check(e.currentTarget.checked)}
 							>
 								Checked
@@ -322,11 +322,11 @@ function DBS() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-5"
 								type="checkbox"
 								variant="outline-success"
 								checked={item5Check}
-								value="1"
+								value="5"
 								onChange={(e) => setItem5Check(e.currentTarget.checked)}
 							>
 								Checked
@@ -368,11 +368,11 @@ function DBS() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-6"
 								type="checkbox"
 								variant="outline-success"
 								checked={item6Check}
-								value="1"
+								value="6"
 								onChange={(e) => setItem6Check(e.currentTarget.checked)}
 							>
 								Checked
@@ -417,11 +417,11 @@ function DBS() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-7"
 								type="checkbox"
 								variant="outline-success"
 								checked={item7Check}
-								value="1"
+								value="7"
 								onChange={(e) => setItem7Check(e.currentTarget.checked)}
 							>
 								Checked
@@ -463,11 +463,11 @@ function DBS() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-8"
 								type="checkbox"
 								variant="outline-success"
 								checked={item8Check}
-								value="1"
+								value="8"
 								onChange={(e) => setItem8Check(e.currentTarget.checked)}
 							>
 								Checked
@@ -509,11 +509,11 @@ function DBS() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-9"
 								type="checkbox"
 								variant="outline-success"
 								checked={item9Check}
-								value="1"
+								value="9"
 								onChange={(e) => setItem9Check(e.currentTarget.checked)}
 							>
 								Checked

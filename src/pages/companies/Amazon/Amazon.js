@@ -138,7 +138,7 @@ function Amazon() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-1"
 								type="checkbox"
 								variant="outline-success"
 								checked={item1Check}
@@ -184,7 +184,7 @@ function Amazon() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-2"
 								type="checkbox"
 								variant="outline-success"
 								checked={item2Check}
@@ -230,7 +230,7 @@ function Amazon() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-3"
 								type="checkbox"
 								variant="outline-success"
 								checked={item3Check}
@@ -276,7 +276,7 @@ function Amazon() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-4"
 								type="checkbox"
 								variant="outline-success"
 								checked={item4Check}
@@ -322,7 +322,7 @@ function Amazon() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-5"
 								type="checkbox"
 								variant="outline-success"
 								checked={item5Check}
@@ -368,7 +368,7 @@ function Amazon() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-6"
 								type="checkbox"
 								variant="outline-success"
 								checked={item6Check}
@@ -417,7 +417,7 @@ function Amazon() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-7"
 								type="checkbox"
 								variant="outline-success"
 								checked={item7Check}
@@ -463,7 +463,7 @@ function Amazon() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-8"
 								type="checkbox"
 								variant="outline-success"
 								checked={item8Check}
@@ -509,7 +509,7 @@ function Amazon() {
 						<div style={{ margin: "auto 8rem", width: "40%" }}>
 							<ToggleButton
 								className="mb-2"
-								id="toggle-check"
+								id="toggle-check-9"
 								type="checkbox"
 								variant="outline-success"
 								checked={item9Check}
