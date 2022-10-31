@@ -9,6 +9,7 @@ import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import Modal from "react-bootstrap/Modal";
 
 import Header from "../../components/Header/Header.js";
 
@@ -40,6 +41,13 @@ function DataSettings() {
 	const [name, setName] = useState("");
 	const [user, loading, error] = useAuthState(auth);
 	const navigate = useNavigate();
+
+	const [show, setShow] = useState(false);
+	const handleShow = () => setShow(true);
+	const handleClose = () => setShow(false);
+
+	const [documentName, setDocumentName] = useState("");
+	const [fileType, setFileType] = useState("");
 
 	const fetchUserName = async () => {
 		try {
@@ -82,7 +90,7 @@ function DataSettings() {
 					justifyContent: "center",
 				}}
 			>
-				<Button href="/uploadDocument">Upload New Document</Button>
+				<Button onClick={handleShow}>Upload New Document</Button>
 			</div>
 			<Container>
 				<Card style={{ margin: "2rem auto", width: "40%" }}>
@@ -169,6 +177,47 @@ function DataSettings() {
 					</div>
 				</Card>
 			</Container>
+
+			<Modal show={show} onHide={handleClose}>
+				<Modal.Header closeButton>
+					<Modal.Title>Upload New Document</Modal.Title>
+				</Modal.Header>
+				<Modal.Body>
+					<Form.Group>
+						<Form.Label>Enter Document Name</Form.Label>
+						<Form.Control
+							value={documentName}
+							onChange={(e) => setDocumentName(e.target.value)}
+							placeholder="Enter Document Name"
+						></Form.Control>
+					</Form.Group>
+					<Form.Group>
+						<Form.Label>Enter Document Type:</Form.Label>
+						<Form.Control
+							value={fileType}
+							onChange={(e) => setFileType(e.target.value)}
+							placeholder="Enter File Type"
+						></Form.Control>
+					</Form.Group>
+					<div
+						style={{
+							display: "flex",
+							justifyContent: "center",
+							marginTop: "1rem",
+						}}
+					>
+						<Button>Upload Document</Button>
+					</div>
+				</Modal.Body>
+				<Modal.Footer>
+					<Button variant="success" onClick={handleClose}>
+						Submit
+					</Button>
+					<Button variant="danger" onClick={handleClose}>
+						Cancel
+					</Button>
+				</Modal.Footer>
+			</Modal>
 		</>
 	);
 }

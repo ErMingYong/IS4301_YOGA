@@ -61,10 +61,13 @@ function Withdraw() {
 		fetchUserName();
 	}, [user, loading]);
 
-	const [show, setShow] = useState(false);
+	const [show1, setShow1] = useState(false);
+	const [show2, setShow2] = useState(false);
 
-	const handleClose = () => setShow(false);
-	const handleShow = () => setShow(true);
+	const handleClose1 = () => setShow1(false);
+	const handleShow1 = () => setShow1(true);
+	const handleClose2 = () => setShow2(false);
+	const handleShow2 = () => setShow2(true);
 
 	return (
 		<>
@@ -169,7 +172,7 @@ function Withdraw() {
 								{account1.status}
 							</Card.Text>
 							<Button
-								onClick={handleShow}
+								onClick={handleShow1}
 								style={{
 									backgroundColor: "white",
 									border: "none",
@@ -217,7 +220,7 @@ function Withdraw() {
 								{account2.status}
 							</Card.Text>
 							<Button
-								onClick={handleShow}
+								onClick={handleShow1}
 								style={{
 									backgroundColor: "white",
 									border: "none",
@@ -280,7 +283,7 @@ function Withdraw() {
 								width: "10rem",
 								margin: "1rem",
 							}}
-							onClick={handleShow}
+							onClick={handleShow2}
 						>
 							Withdraw
 						</Button>
@@ -291,7 +294,7 @@ function Withdraw() {
 				</Card>
 			</Container>
 
-			<Modal show={show} onHide={handleClose}>
+			<Modal show={show1} onHide={handleClose1}>
 				<Modal.Header closeButton>
 					<Modal.Title>Bank Account Deletion</Modal.Title>
 				</Modal.Header>
@@ -299,11 +302,27 @@ function Withdraw() {
 					* Deletion of Bank Account will take 1 - 2 Business Days
 				</Modal.Body>
 				<Modal.Footer>
-					<Button variant="success" onClick={handleClose}>
+					<Button variant="success" onClick={handleClose1}>
 						Accept
 					</Button>
-					<Button variant="danger" onClick={handleClose}>
+					<Button variant="danger" onClick={handleClose1}>
 						Reject
+					</Button>
+				</Modal.Footer>
+			</Modal>
+			<Modal show={show2} onHide={handleClose2}>
+				<Modal.Header closeButton>
+					<Modal.Title>Wallet Withdrawal</Modal.Title>
+				</Modal.Header>
+				<Modal.Body>
+					* Withdrawal of funds will take 3 - 5 Business Days to process
+				</Modal.Body>
+				<Modal.Footer>
+					<Button variant="success" onClick={handleClose2}>
+						Ok
+					</Button>
+					<Button variant="danger" onClick={handleClose2}>
+						Cancel
 					</Button>
 				</Modal.Footer>
 			</Modal>

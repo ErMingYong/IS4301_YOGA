@@ -140,7 +140,7 @@ function Settings() {
 					<Form.Group>
 						<Button
 							type="submit"
-							href="/"
+							href="/home"
 							style={{
 								margin: "1rem",
 								backgroundColor: "white",
