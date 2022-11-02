@@ -25,6 +25,15 @@ import AppleIcon from "../../icons/apple.png";
 import SingPassIcon from "../../icons/singpass.png";
 import AdditionIcon from "../../icons/addition.png";
 
+import EmailDataTable from "../../icons/tables/email_data.png";
+import LocationDataTable from "../../icons/tables/location_data.png";
+import LoanChanceTable from "../../icons/tables/loan_chance.png";
+import MaximumLoanAmountTable from "../../icons/tables/maximum_loan_amount.png";
+import GoogleAccountTable from "../../icons/tables/google_account_data.png";
+import AppleAccountTable from "../../icons/tables/apple_account_data.png";
+import CreditScoreTable from "../../icons/tables/credit_score.png";
+import InterestRateTable from "../../icons/tables/interest_rate.png";
+
 export const user = {
 	name: "Jon",
 };
@@ -299,6 +308,77 @@ function Home() {
 							</Card.Text>
 						</div>
 					</Card.Body>
+				</Card>
+			</Container>
+			<Container className="container">
+				<Card
+					className="card"
+					style={{
+						display: "flex",
+						width: "80%",
+						boxBorder: "none",
+					}}
+				>
+					<div>
+						<img
+							src={EmailDataTable}
+							alt="Email Data"
+							height={300}
+							width={225}
+							style={{ margin: "0.5rem" }}
+						/>
+						<img
+							src={LocationDataTable}
+							alt="Location Data"
+							height={300}
+							width={225}
+							style={{ margin: "0.5rem" }}
+						/>
+						<img
+							src={LoanChanceTable}
+							alt="Loan Chance"
+							height={300}
+							width={225}
+							style={{ margin: "0.5rem" }}
+						/>
+						<img
+							src={MaximumLoanAmountTable}
+							alt="Maximum Loan Amount"
+							height={300}
+							width={225}
+							style={{ margin: "0.5rem" }}
+						/>
+					</div>
+					<div>
+						<img
+							src={GoogleAccountTable}
+							alt="Google Account Data"
+							height={300}
+							width={225}
+							style={{ margin: "0.5rem" }}
+						/>
+						<img
+							src={AppleAccountTable}
+							alt="Apple Account Data"
+							height={300}
+							width={225}
+							style={{ margin: "0.5rem" }}
+						/>
+						<img
+							src={CreditScoreTable}
+							alt="Credit Score Data"
+							height={300}
+							width={225}
+							style={{ margin: "0.5rem" }}
+						/>
+						<img
+							src={InterestRateTable}
+							alt="Interest Rate Data"
+							height={300}
+							width={225}
+							style={{ margin: "0.5rem" }}
+						/>
+					</div>
 				</Card>
 			</Container>
 		</>
